@@ -12,11 +12,11 @@ class AppCubit extends Cubit<AppStates> {
   static AppCubit get(context) => BlocProvider.of(context);
 
   PageController pgController = PageController();
-  var emailController1 = TextEditingController();
-  var passwordController1 = TextEditingController();
-  var nameController = TextEditingController();
-  var ageController = TextEditingController();
-
+  final emailController1 = TextEditingController();
+  final passwordController1 = TextEditingController();
+  final nameController = TextEditingController();
+  final ageController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
   bool isPassword = true;
   int index = 0;
   List<Widget> pagebuilderlist = [
