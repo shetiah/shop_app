@@ -98,6 +98,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           RichText(
                             text: TextSpan(children: [
@@ -110,12 +111,8 @@ class LoginScreen extends StatelessWidget {
                                       color: Color.fromRGBO(24, 44, 228, 1)),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const RegisterScreen()),
-                                      );
+                                      navigateTo(
+                                          context, const RegisterScreen());
                                     }),
                             ]),
                           )
